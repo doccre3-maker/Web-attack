@@ -114,7 +114,7 @@ presets = {
 # ---------- LOAD ARTIFACTS ----------
 @st.cache_resource
 def load_artifacts():
-    base = Path("models")
+    base = Path(__file__).resolve().parent
     scaler = joblib.load(base / "scaler.pkl")
     method_encoder = joblib.load(base / "method_encoder.pkl")
     target_encoder = joblib.load(base / "target_encoder.pkl")
