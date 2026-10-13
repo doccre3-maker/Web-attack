@@ -1,0 +1,31 @@
+MODEL TRAINING SUMMARY
+========================================
+Dataset: dataset.csv
+Total samples: 10800
+Attack classes: 9
+Train/Test split: 8640 / 2160
+
+Model Performance:
+        Model  Accuracy  Precision   Recall  F1-Score
+Random Forest  0.978704   0.978863 0.978704  0.978722
+      XGBoost  0.981019   0.981331 0.981019  0.981052
+          SVM  0.974537   0.974899 0.974537  0.974581
+
+Best model: XGBoost (F1 = 0.9811)
+
+Detailed Classification Report (Best Model):
+                       precision    recall  f1-score   support
+
+      Buffer Overflow       1.00      1.00      1.00       240
+       CRLF Injection       0.97      0.97      0.97       240
+                 CSRF       0.99      0.96      0.97       240
+Information Gathering       1.00      0.98      0.99       240
+               Normal       0.97      1.00      0.98       240
+  Parameter Tampering       0.94      0.98      0.96       240
+       Path Traversal       0.98      0.99      0.98       240
+        SQL Injection       0.99      0.97      0.98       240
+                  XSS       0.99      0.98      0.99       240
+
+             accuracy                           0.98      2160
+            macro avg       0.98      0.98      0.98      2160
+         weighted avg       0.98      0.98      0.98      2160
